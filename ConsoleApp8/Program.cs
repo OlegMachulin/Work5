@@ -20,6 +20,12 @@ namespace ConsoleApp8
                 {
                    int result;
                    string enter = Convert.ToString(Console.ReadLine());
+                   if(enter=="")
+                {
+                    Console.WriteLine("Thanks for try");
+                    Console.WriteLine("the hidden number" + n);
+                    break;
+                }
                    if(int.TryParse(enter, out result))
                    {
                      if (result == n)
@@ -30,12 +36,12 @@ namespace ConsoleApp8
                      else if (result > n) Console.Write("Your number is bigger: ");
                      else if (result < n) Console.Write("your number is less: ");
                    }
-                   else if (string.IsNullOrEmpty(enter))
-                   {
-                       Console.WriteLine("Thanks for try");
-                       Console.WriteLine("the hidden number" + n);
-                       break;
-                   }
+                   //else if (string.IsNullOrEmpty(enter))
+                   //{
+                   //    Console.WriteLine("Thanks for try");
+                   //    Console.WriteLine("the hidden number" + n);
+                   //    break;
+                   //}
 
 
             }
